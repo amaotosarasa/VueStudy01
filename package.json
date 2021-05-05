@@ -1,0 +1,12 @@
+{
+  "name": "VueStudy01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "amaotosarasa <cock.robin20@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "connect-ssi": "^1.1.1",
+    "gulp": "^4.0.2"
+  }
+}
