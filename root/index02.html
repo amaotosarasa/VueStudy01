@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vur.js</title>
+	<link rel="stylesheet" href="/cmn/css/ress.min.css">
+</head>
+<body>
+
+	<div id="app">
+		<div>
+		<!-- **** テキストの出力 **** -->
+			<!-- data messageの値を出力 -->
+			<p>{{ message }}</p>
+
+			<!-- 上の状態と同様になる -->
+			<p v-text="message"></p>
+
+			<!-- messageの値の出力を止める {{ message }}と出力される（<p>タグの中身がそのまま出力） -->
+			<p v-pre>{{ message }}</p>
+		<!-- **** //テキストの出力 **** -->
+		</div>
+
+		<div>
+		<!-- **** 属性を埋め込む ****  -->
+			<P><a v-bind:href="testUrl">google</a></P>
+			<!--
+				v-bind:属性名="値"と指定して作成する
+				ディレクティブの:のあとは引数となる。
+			-->
+
+			<P><a :href="testUrl">google</a></P>
+			<!--
+				:属性名="値"とすることでv-bindを省略することができます。
+			-->
+
+			<div><input type="button" v-bind:disabled="flag" value="クリック"></div>
+			<!--
+				checked,selected,disabledなど値のない属性（属性名を指定するもの）、は論理属性とよび
+				true falseをバインドする
+			-->
+		<!-- **** //属性を埋め込む **** -->
+		</div>
+
+		<div>
+		<!-- **** 算出プロパティー **** -->
+			<p>{{ localEmail }}</p>
+			<!-- 
+				算出プロパティで定義したプロパティ名でよびだすことができる
+				算出プロパティは引数を持つことができない。
+				値はキャッシュされる
+			-->
+		<!-- **** //算出プロパティー **** -->
+		</div>
+
+		<p>{{ current.toLocaleString() }}</p>
+
+		<pre>
+			{{ $data }}
+		</pre>
+	</div>
+	<!-- #app -->
+	
+	<!-- <script src="/cmn/js/Vue.2.6.10.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+	<script src="/js/script02.js"></script>
+</body>
+</html>
