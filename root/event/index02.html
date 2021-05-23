@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vue.js</title>
+	<link rel="stylesheet" href="/cmn/css/ress.min.css">
+	<style>
+		img{
+			max-width: 100%;
+			vertical-align: bottom;
+		}
+		.imgList{
+			margin: 60px;
+			list-style: none;
+		}
+		.imgList > li:not(:first-child){
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="app">
+		<main>
+			<h1>{{ title }}</h1>
+		</main>
+
+		<ul class="imgList">
+			<li class="imgList--item"><a v-on:mouseover="imgMouseOver" v-on:mouseout="imgMouseOut" href="#"><img src="/event/img/btn_01_off.gif" alt="ボタン画像01"></a></li>
+			<li class="imgList--item"><a v-on:mouseover="imgMouseOver" v-on:mouseout="imgMouseOut" href="#"><img src="/event/img/btn_02_off.gif" alt="ボタン画像02"></a></li>
+			<li class="imgList--item"><a v-on:mouseover="imgMouseOver" v-on:mouseout="imgMouseOut" href="#"><img src="/event/img/btn_03_off.gif" alt="ボタン画像03"></a></li>
+		</ul>
+	</div>
+	
+	<script src="/cmn/js/Vue.2.6.10.js"></script>
+	<script src="/event/js/script02.js"></script>
+</body>
+</html>
